@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ export class TvListingsService {
   constructor() { }
 
   getListingsGrid(area: string) {
-    return canned_response;
+    return of(this.canned_response);
   }
 
-  const canned_response=
+  canned_response=
 	{
 	  "0": {
 	    "channel": {
