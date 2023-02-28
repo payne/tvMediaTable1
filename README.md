@@ -1,4 +1,4 @@
-# TvMediaTable1
+# TvMediaTable1 is at https://payne.github.io/tvMediaTable1/
 
 Trying to format tvMedia.ca for my Mom (92yo) for local OTA
 
