@@ -30,3 +30,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+ng build  --base-href https://payne.github.io/tvMediaTable1/
+ngh --dir=dist/tv-media-table1 # when on gh-pages branch
+From https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
+
