@@ -1,1 +1,10 @@
 <p>api-key works!</p>
+
+<form [formGroup]="apiKeyForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="apiKey" placeholder="API Key">
+  <input type="text" formControlName="startTime" placeholder="Start Time">
+  <input type="text" formControlName="endTime" placeholder="End Time">
+  <input type="text" formControlName="broadcastDate" placeholder="Broadcast Date">
+  <button type="submit">Submit</button>
+</form>
+
