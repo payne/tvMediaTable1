@@ -20,7 +20,7 @@ export class TvGrid1Component implements OnInit {
   }
 
   toLocalTime(d: Date) {
-    return d.toLocaleTimeString();
+    return d.toLocaleDateString() + ' ' + d.toLocaleTimeString();
   }
 
   ngOnInit(): void {
