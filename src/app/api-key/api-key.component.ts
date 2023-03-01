@@ -16,7 +16,7 @@ export class ApiKeyComponent {
 
   apiKeyForm = new FormGroup({
     apiKey: new FormControl(''),
-    startTime: new FormControl(''),
+    startTime: new FormControl('2023-03-01T24:00:00'),
     endTime: new FormControl(''),
     broadcastDate: new FormControl('')
   });
