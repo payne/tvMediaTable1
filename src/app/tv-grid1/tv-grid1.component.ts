@@ -13,8 +13,13 @@ export class TvGrid1Component implements OnInit {
   constructor(private tvListings: TvListingsService) {
   }
 
-  toLocalTime(dateString: string) {
+  toOmahaTime(dateString: string) {
     const d = new Date(dateString);
+    d.setHours(d.getHours() - 6);
+    return d;
+  }
+
+  toLocalTime(d: Date) {
     return d.toLocaleTimeString();
   }
 
