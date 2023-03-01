@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TvGrid1Component } from './tv-grid1/tv-grid1.component';
 import { ApiKeyComponent } from './api-key/api-key.component';
 import { ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, ReactiveFormsModule
+    AppRoutingModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

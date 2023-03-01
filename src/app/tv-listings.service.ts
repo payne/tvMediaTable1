@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,23 @@ export class TvListingsService {
   endTime: string = '';
   broadcastDate: string = '';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   setParameters( apiKeyForm: any ) {
     console.log(apiKeyForm);
+    this.apiKey = apiKeyForm.apiKey;
+    this.startTime  = apiKeyForm.startTime;
   }
 
-
   getListingsGrid(area: string) {
-    return of(this.canned_response);
+    const urlStr = `https://api.tvmedia.ca/tv/v4/lineups/32254/listings/grid?start=${this.startTime}&pretty=1&api_key=${this.apiKey}`;
+    console.table({'urlStr': urlStr});
+    return this.http.get<any>(urlStr);
+   }
+
+  getListingsGridOLD(area: string) {
+    return this.getListingsGrid(area);
+    // return of(this.canned_response);
   }
 
   canned_response= [

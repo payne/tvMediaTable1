@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import {TvListingsService} from "../tv-listings.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-api-key',
@@ -21,11 +22,11 @@ export class ApiKeyComponent {
   });
 
 
-  constructor(private tvListings: TvListingsService) { }
+  constructor(private tvListings: TvListingsService, private router: Router) { }
 
   onSubmit() {
-    console.log(this.apiKeyForm.value);
-    console.log(`That ^^^ is the value of the form`);
+    this.tvListings.setParameters(this.apiKeyForm.value);
+    this.router.navigate(['/']);
   }
 
 }
