@@ -24,7 +24,7 @@ export class TvGrid1Component implements OnInit {
   }
 
   ngOnInit(): void {
-    this.tvListings.getListingsGridOLD("junk").subscribe((data) => {
+    this.tvListings.getListingsGrid("junk").subscribe((data) => {
       console.log(data);
       this.tvData = data;
       this.channels = [];

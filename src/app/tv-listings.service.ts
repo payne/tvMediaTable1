@@ -26,11 +26,8 @@ export class TvListingsService {
     return this.http.get<any>(urlStr);
    }
 
-  getListingsGridOLD(area: string) {
-    return this.getListingsGrid(area);
-    // return of(this.canned_response);
-  }
 
+   // Left to show the format
   canned_response= [
   {
     "channel":{
