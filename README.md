@@ -4,7 +4,9 @@
 
 Trying to format tvMedia.ca for my Mom (92yo) for local OTA
 
-## 
+## Sample output:
+![Sample output](TVGrid_Sample.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
