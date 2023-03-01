@@ -17,10 +17,6 @@ export class TvListingsService {
     console.log(apiKeyForm);
   }
 
-  toLocalTime(dateString: string) {
-    const d = new Date(dateString);
-    return d.toLocaleTimeString();
-  }
 
   getListingsGrid(area: string) {
     return of(this.canned_response);

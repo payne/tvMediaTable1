@@ -13,6 +13,11 @@ export class TvGrid1Component implements OnInit {
   constructor(private tvListings: TvListingsService) {
   }
 
+  toLocalTime(dateString: string) {
+    const d = new Date(dateString);
+    return d.toLocaleTimeString();
+  }
+
   ngOnInit(): void {
     this.tvListings.getListingsGrid("junk").subscribe((data) => {
       console.log(data);
