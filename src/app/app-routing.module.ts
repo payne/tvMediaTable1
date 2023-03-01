@@ -4,8 +4,8 @@ import { TvGrid1Component } from './tv-grid1/tv-grid1.component';
 import { ApiKeyComponent } from './api-key/api-key.component';
 
 const routes: Routes = [
-  { path: '', component: TvGrid1Component },
-  { path: 'api', component: ApiKeyComponent },
+  { path: 'list', component: TvGrid1Component },
+  { path: '', component: ApiKeyComponent },
 ];
 
 @NgModule({

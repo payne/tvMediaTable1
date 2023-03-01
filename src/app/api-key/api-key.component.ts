@@ -26,7 +26,7 @@ export class ApiKeyComponent {
 
   onSubmit() {
     this.tvListings.setParameters(this.apiKeyForm.value);
-    this.router.navigate(['/']);
+    this.router.navigate(['list']);
   }
 
 }
