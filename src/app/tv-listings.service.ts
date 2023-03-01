@@ -6,7 +6,21 @@ import { of } from 'rxjs';
 })
 export class TvListingsService {
 
+  apiKey: string = '';
+  startTime: string = '';
+  endTime: string = '';
+  broadcastDate: string = '';
+
   constructor() { }
+
+  setParameters( apiKeyForm: any ) {
+    console.log(apiKeyForm);
+  }
+
+  toLocalTime(dateString: string) {
+    const d = new Date(dateString);
+    return d.toLocaleTimeString();
+  }
 
   getListingsGrid(area: string) {
     return of(this.canned_response);
@@ -79,7 +93,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Wayne Brady"
       },
@@ -131,7 +145,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Natalie Morales, Craig Melvin"
       },
@@ -183,7 +197,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Kristina Guerrero, Jimmy Rhoades"
       },
@@ -235,7 +249,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Julie Grant, Rob Nelson"
       },
@@ -287,7 +301,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -339,7 +353,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -411,7 +425,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -463,7 +477,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -515,7 +529,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -567,7 +581,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -619,7 +633,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -671,7 +685,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -723,7 +737,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -775,7 +789,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -847,7 +861,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -899,7 +913,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -951,7 +965,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1003,7 +1017,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1055,7 +1069,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1107,7 +1121,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1159,7 +1173,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1211,7 +1225,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -1283,7 +1297,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1335,7 +1349,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1387,7 +1401,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1439,7 +1453,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -1511,7 +1525,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Dr. Phil McGraw"
       },
@@ -1563,7 +1577,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1615,7 +1629,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1667,7 +1681,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1719,7 +1733,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -1791,7 +1805,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1843,7 +1857,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1895,7 +1909,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -1947,7 +1961,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -2019,7 +2033,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2071,7 +2085,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2123,7 +2137,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2175,7 +2189,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -2247,7 +2261,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2299,7 +2313,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2351,7 +2365,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2403,7 +2417,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -2475,7 +2489,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2527,7 +2541,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2579,7 +2593,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2631,7 +2645,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -2703,7 +2717,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jennifer Hudson"
       },
@@ -2755,7 +2769,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Kelly Clarkson"
       },
@@ -2807,7 +2821,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2859,7 +2873,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -2911,7 +2925,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -2983,7 +2997,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3035,7 +3049,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3087,7 +3101,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3139,7 +3153,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3191,7 +3205,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3243,7 +3257,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -3315,7 +3329,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Tamron Hall"
       },
@@ -3367,7 +3381,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jennifer Hudson"
       },
@@ -3419,7 +3433,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Dr. Phil McGraw"
       },
@@ -3471,7 +3485,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3523,7 +3537,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -3595,7 +3609,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3647,7 +3661,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3699,7 +3713,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3751,7 +3765,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3803,7 +3817,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3855,7 +3869,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3907,7 +3921,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -3959,7 +3973,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -4031,7 +4045,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4083,7 +4097,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4135,7 +4149,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4187,7 +4201,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -4259,7 +4273,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4311,7 +4325,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4363,7 +4377,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4415,7 +4429,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4467,7 +4481,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4519,7 +4533,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4571,7 +4585,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4623,7 +4637,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -4695,7 +4709,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Wayne Brady"
       },
@@ -4747,7 +4761,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Kelly Clarkson"
       },
@@ -4799,7 +4813,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4851,7 +4865,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Mayim Bialik"
       },
@@ -4903,7 +4917,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -4955,7 +4969,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -5027,7 +5041,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5079,7 +5093,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5131,7 +5145,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5183,7 +5197,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -5255,7 +5269,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5307,7 +5321,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5359,7 +5373,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5411,7 +5425,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -5483,7 +5497,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5535,7 +5549,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5587,7 +5601,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5639,7 +5653,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -5711,7 +5725,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5763,7 +5777,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5815,7 +5829,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Samantha Brown"
       },
@@ -5867,7 +5881,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Colleen Kelly"
       },
@@ -5919,7 +5933,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -5971,7 +5985,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lucy Worsley"
       }
@@ -6043,7 +6057,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -6095,7 +6109,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Brooks"
       },
@@ -6147,7 +6161,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Ben Fajzullin"
       },
@@ -6199,7 +6213,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -6251,7 +6265,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -6303,7 +6317,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -6375,7 +6389,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Susan Brubaker Knapp"
       },
@@ -6427,7 +6441,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Bridget Lancaster, Julia Collin Davison"
       },
@@ -6479,7 +6493,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Cat Neville"
       },
@@ -6531,7 +6545,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lidia Bastianich"
       },
@@ -6583,7 +6597,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Chet Garner"
       },
@@ -6635,7 +6649,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Joseph Rosendo"
       },
@@ -6687,7 +6701,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Rick Steves"
       },
@@ -6739,7 +6753,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Chang"
       }
@@ -6811,7 +6825,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Sherri Shepherd"
       },
@@ -6863,7 +6877,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Karamo Brown"
       },
@@ -6915,7 +6929,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Steve Wilkos"
       },
@@ -6967,7 +6981,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Maury Povich"
       }
@@ -7039,7 +7053,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7091,7 +7105,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7143,7 +7157,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7195,7 +7209,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7247,7 +7261,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7299,7 +7313,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7351,7 +7365,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"John Anderson, John Henson, Jill Wagner"
       }
@@ -7423,7 +7437,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7475,7 +7489,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7527,7 +7541,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7579,7 +7593,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -7651,7 +7665,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7703,7 +7717,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7755,7 +7769,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7807,7 +7821,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7859,7 +7873,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -7911,7 +7925,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -7983,7 +7997,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8035,7 +8049,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8087,7 +8101,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Samantha Brown"
       },
@@ -8139,7 +8153,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Colleen Kelly"
       },
@@ -8191,7 +8205,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8243,7 +8257,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lucy Worsley"
       }
@@ -8315,7 +8329,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8367,7 +8381,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Brooks"
       },
@@ -8419,7 +8433,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Ben Fajzullin"
       },
@@ -8471,7 +8485,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8523,7 +8537,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -8575,7 +8589,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -8647,7 +8661,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Susan Brubaker Knapp"
       },
@@ -8699,7 +8713,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Bridget Lancaster, Julia Collin Davison"
       },
@@ -8751,7 +8765,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Cat Neville"
       },
@@ -8803,7 +8817,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lidia Bastianich"
       },
@@ -8855,7 +8869,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Chet Garner"
       },
@@ -8907,7 +8921,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Joseph Rosendo"
       },
@@ -8959,7 +8973,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Rick Steves"
       },
@@ -9011,7 +9025,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Chang"
       }
@@ -9083,7 +9097,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9135,7 +9149,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9187,7 +9201,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9239,7 +9253,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9291,7 +9305,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9343,7 +9357,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9395,7 +9409,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9447,7 +9461,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -9519,7 +9533,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9571,7 +9585,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9623,7 +9637,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9675,7 +9689,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9727,7 +9741,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9779,7 +9793,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9831,7 +9845,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -9883,7 +9897,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -9955,7 +9969,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10007,7 +10021,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10059,7 +10073,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10111,7 +10125,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10163,7 +10177,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10215,7 +10229,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10267,7 +10281,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10319,7 +10333,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -10391,7 +10405,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10443,7 +10457,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Brooks"
       },
@@ -10495,7 +10509,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Ben Fajzullin"
       },
@@ -10547,7 +10561,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10599,7 +10613,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -10651,7 +10665,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -10723,7 +10737,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Susan Brubaker Knapp"
       },
@@ -10775,7 +10789,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Bridget Lancaster, Julia Collin Davison"
       },
@@ -10827,7 +10841,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Charity Nebbe"
       },
@@ -10879,7 +10893,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lidia Bastianich"
       },
@@ -10931,7 +10945,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Chet Garner"
       },
@@ -10983,7 +10997,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Joseph Rosendo"
       },
@@ -11035,7 +11049,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Rick Steves"
       },
@@ -11087,7 +11101,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Chang"
       }
@@ -11159,7 +11173,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Burt Convy"
       },
@@ -11211,7 +11225,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Burt Convy"
       },
@@ -11263,7 +11277,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Alex Trebek"
       },
@@ -11315,7 +11329,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Alex Trebek"
       },
@@ -11367,7 +11381,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Alex Trebek"
       },
@@ -11419,7 +11433,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Alex Trebek"
       },
@@ -11471,7 +11485,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Gene Rayburn"
       },
@@ -11523,7 +11537,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Gene Rayburn"
       }
@@ -11595,7 +11609,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11647,7 +11661,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11699,7 +11713,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11751,7 +11765,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -11823,7 +11837,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11875,7 +11889,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11927,7 +11941,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -11979,7 +11993,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12031,7 +12045,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12083,7 +12097,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12135,7 +12149,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -12207,7 +12221,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12259,7 +12273,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12311,7 +12325,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12363,7 +12377,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12415,7 +12429,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12467,7 +12481,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12519,7 +12533,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"National Stadium, Magdalena, LIM, PER",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -12591,7 +12605,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12643,7 +12657,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12695,7 +12709,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12747,7 +12761,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12799,7 +12813,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12851,7 +12865,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12903,7 +12917,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -12955,7 +12969,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -13027,7 +13041,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13079,7 +13093,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13131,7 +13145,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13183,7 +13197,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13235,7 +13249,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13287,7 +13301,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13339,7 +13353,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13391,7 +13405,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -13463,7 +13477,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13515,7 +13529,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Brooks"
       },
@@ -13567,7 +13581,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Ben Fajzullin"
       },
@@ -13619,7 +13633,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13671,7 +13685,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -13723,7 +13737,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -13795,7 +13809,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Susan Brubaker Knapp"
       },
@@ -13847,7 +13861,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Bridget Lancaster, Julia Collin Davison"
       },
@@ -13899,7 +13913,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Charity Nebbe"
       },
@@ -13951,7 +13965,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Lidia Bastianich"
       },
@@ -14003,7 +14017,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Chet Garner"
       },
@@ -14055,7 +14069,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Joseph Rosendo"
       },
@@ -14107,7 +14121,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Rick Steves"
       },
@@ -14159,7 +14173,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Danielle Chang"
       }
@@ -14231,7 +14245,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14283,7 +14297,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Marilyn Milian"
       },
@@ -14335,7 +14349,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14387,7 +14401,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14439,7 +14453,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jay Leno, Kevin Eubanks"
       },
@@ -14491,7 +14505,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jay Leno, Kevin Eubanks"
       }
@@ -14563,7 +14577,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Sarah Richardson"
       },
@@ -14615,7 +14629,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Sarah Richardson"
       },
@@ -14667,7 +14681,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jules Hudson, Alistair Appleton, Denise Nurse, Tim Vincent, Nicki Chapman, Jonnie Irwin"
       },
@@ -14719,7 +14733,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jules Hudson, Alistair Appleton, Denise Nurse, Tim Vincent, Nicki Chapman, Jonnie Irwin"
       },
@@ -14771,7 +14785,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Nicki Chapman"
       }
@@ -14843,7 +14857,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14895,7 +14909,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14947,7 +14961,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -14999,7 +15013,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }
@@ -15071,7 +15085,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Myrka Dellanos, Ver\u00f3nica Bastos, Alix Aspe, Giselle Blondet"
       },
@@ -15123,7 +15137,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Jessica Carrillo, Lourdes Stephen, Antonio Texeira, Mar\u00eda Celeste Arrar\u00e1s"
       },
@@ -15175,7 +15189,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":"Ana Jurka, Carlos Adyan"
       },
@@ -15227,7 +15241,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       },
@@ -15279,7 +15293,7 @@ export class TvListingsService {
         "eventID":0,
         "location":"",
         "artwork":[
-          
+
         ],
         "showHost":""
       }

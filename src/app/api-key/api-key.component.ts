@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
+import {TvListingsService} from "../tv-listings.service";
 
 @Component({
   selector: 'app-api-key',
@@ -11,10 +12,6 @@ export class ApiKeyComponent {
   // store all of this information in a service
   // the service will make the information available to the other components
 
-  apiKey: string = '';
-  startTime: string = '';
-  endTime: string = '';
-  broadcastDate: string = '';
 
   apiKeyForm = new FormGroup({
     apiKey: new FormControl(''),
@@ -24,7 +21,7 @@ export class ApiKeyComponent {
   });
 
 
-  constructor() { }
+  constructor(private tvListings: TvListingsService) { }
 
   onSubmit() {
     console.log(this.apiKeyForm.value);
