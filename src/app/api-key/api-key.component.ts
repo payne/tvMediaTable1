@@ -14,10 +14,11 @@ export class ApiKeyComponent implements  OnInit {
   // the service will make the information available to the other components
 
   apiKey = new FormControl('');
+  startTime = new FormControl('2023-03-01T24:00:00');
 
   apiKeyForm = new FormGroup({
     apiKey: this.apiKey,
-    startTime: new FormControl('2023-03-01T24:00:00'),
+    startTime: this.startTime,
     endTime: new FormControl(''),
     broadcastDate: new FormControl('')
   });
@@ -27,6 +28,10 @@ export class ApiKeyComponent implements  OnInit {
 
   onSubmit() {
     const formData = this.apiKeyForm.value;
+    const formStartDate = formData['startTime'] as string;
+    const d = new Date(formStartDate);
+    d.setDate(d.getDate()+1)
+    localStorage.setItem('startTime', d.toISOString());
     this.tvListings.setParameters(formData);
     localStorage.setItem('apiKey', formData['apiKey'] as string);
     this.router.navigate(['list']);
@@ -34,7 +39,10 @@ export class ApiKeyComponent implements  OnInit {
 
   ngOnInit(): void {
     const locallyStoredApiKey = localStorage.getItem('apiKey');
+    let locallyStoredStartTime = localStorage.getItem('startTime');
+    locallyStoredStartTime = locallyStoredStartTime ? locallyStoredStartTime : '2023-03-01T24:00:00';
     this.apiKey.setValue(locallyStoredApiKey);
+    this.startTime.setValue(locallyStoredStartTime);
   }
 
 }
