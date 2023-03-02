@@ -1,10 +1,20 @@
-<p>api-key works!</p>
-
-<form [formGroup]="apiKeyForm" (ngSubmit)="onSubmit()">
-  <input type="text" formControlName="apiKey" placeholder="API Key">
-  <input type="text" formControlName="startTime" value="2023-03-01T24:00:00">
-  <input type="text" formControlName="endTime" placeholder="End Time">
-  <input type="text" formControlName="broadcastDate" placeholder="Broadcast Date">
-  <button type="submit">Submit</button>
-</form>
-
+<table>
+  <tr>
+    <td>
+      <form [formGroup]="apiKeyForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="apiKey" placeholder="API Key">
+        <input type="text" formControlName="startTime" value="2023-03-01T24:00:00">
+        <input type="text" formControlName="endTime" placeholder="End Time">
+        <input type="text" formControlName="broadcastDate" placeholder="Broadcast Date">
+        <button type="submit">Submit</button>
+      </form>
+    </td>
+    <td>
+      <a href="https://github.com/payne/tvMediaTable1">
+        <img decoding="async" loading="lazy" width="149" height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149"
+                                            class="attachment-full size-full" alt="Fork me on GitHub"
+                                            data-recalc-dims="1"></a>
+    </td>
+  </tr>
+</table>
